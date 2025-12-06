@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ConfigTest {
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:bdd/product")
+        Results results = Runner.path("classpath:bdd")
                 //.outputCucumberJson(true)
                 .parallel(2);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
